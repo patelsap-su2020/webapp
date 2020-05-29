@@ -15,7 +15,7 @@ jobs:
             echo 'testHelloWorld'
             pwd
             ls -al
-            ./mvnw clean install -e
+            ./mvnw clean install 
             ./mvnw spring-boot:run
 workflows:
   version: 2
