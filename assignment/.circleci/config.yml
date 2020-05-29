@@ -16,7 +16,7 @@ jobs:
             echo 'testHelloWorld'
             pwd
             ls -al
-            cd assignment
+            cd webapp/assignment
             mvn clean install
             mvn clean build
 
