@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
         name: Build War file
-          command: |
+        command:  |
             echo 'delivery pipeline'
             pwd
             ls -al
