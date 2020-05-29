@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   build:
+    Working_directory: ~/webapp
     docker:
       - image: circleci/openjdk:8-jdk
       - image: circleci/mysql:5.7.30
