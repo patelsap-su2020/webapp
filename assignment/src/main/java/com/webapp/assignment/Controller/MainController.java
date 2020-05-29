@@ -235,7 +235,6 @@ public class MainController {
             modelAndView.setViewName("login");
         }
         User update_user = userservice.findUserByEmail(email);
-
         String username="";
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal instanceof UserDetails) {
@@ -248,7 +247,6 @@ public class MainController {
         modelAndView.addObject("email",email);
         modelAndView.addObject("user",user);
         modelAndView.setViewName("update_info");
-
         return modelAndView;
     }
 
