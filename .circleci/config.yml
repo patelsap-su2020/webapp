@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/webapp
     docker:
       - image: circleci/openjdk:8-jdk
       - image: circleci/mysql:5.7.30
@@ -9,17 +10,13 @@ jobs:
         - MYSQL_DATABASE: Assignment
     steps:
       - checkout
-      - run:
+      - compile:
           name: Build War file
           command:  |
             echo 'testHelloWorld'
             pwd
             ls -al
-            ./mvn clean install
-            ./mvn spring-boot:run
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
+            ./mvnw clean install
+            ./mvnw spring-boot:run
+
 
