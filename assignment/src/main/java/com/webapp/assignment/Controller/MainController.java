@@ -220,14 +220,12 @@ public class MainController {
         HttpSession session=request.getSession();
         session.removeAttribute("email");
         session.invalidate();
-
         return modelAndView;
     }
 
     @PostMapping(value = {"/re_update"})
     public ModelAndView re_update(HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView();
-
         String email="";
         HttpSession session=request.getSession();
         if(session!=null) {
