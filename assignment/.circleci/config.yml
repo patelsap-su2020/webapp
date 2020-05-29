@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/webapp/assignment
+    working_directory: ~/webapp
     docker:
       - image: circleci/openjdk:8-jdk
       - image: circleci/mysql:5.7.30
@@ -16,6 +16,7 @@ jobs:
             echo 'testHelloWorld'
             pwd
             ls -al
+            cd assignment
             mvn clean install
             mvn clean build
 
