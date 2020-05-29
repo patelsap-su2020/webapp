@@ -277,4 +277,8 @@ public class MainController {
 
         return modelAndView;
     }
+
+    public String helloWorld() {
+        return "Hello World";
+    }
 }

@@ -1,6 +1,7 @@
 package com.webapp.assignment.Repository;
 
 import com.webapp.assignment.Controller.MainController;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.util.AssertionErrors.assertEquals;
 import static org.springframework.test.util.AssertionErrors.assertNotNull;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -24,11 +26,19 @@ public class UserRepositoryIntegrityTest {
 
     @Autowired
    private MainController controller;
-    @Test
-    public void contextLoads() {
 
-        assertNotNull("HelloController is not loaded",controller);
+//    @Test
+//    public void contextLoads() {
+//
+//        assertNotNull("HelloController is not loaded",controller);
+//    }
+
+    @Test
+    public void testHelloWorld() {
+        Assert.assertEquals("It doesn't return 'Hello World'",
+                "Hello World", controller.helloWorld());
     }
+}
 //    private MockMvc mockMvc;
 //
 //    @Before
@@ -51,4 +61,4 @@ public class UserRepositoryIntegrityTest {
 //    public void contexLoads() throws Exception {
 //        assertThat(controller).isNotNull();
 //    }
-}
+
