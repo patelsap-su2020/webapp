@@ -10,13 +10,13 @@ jobs:
         - MYSQL_DATABASE: Assignment
     steps:
       - checkout
-      - compile:
+      - run:
           name: Build War file
           command:  |
             echo 'testHelloWorld'
             pwd
             ls -al
-            ./mvnw clean install
+            mvnw clean install
             ./mvnw spring-boot:run
 
 
