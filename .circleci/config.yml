@@ -17,10 +17,9 @@ jobs:
             ls -al
             ./mvnw clean install -e
             ./mvnw spring-boot:run
-	
-  workflows:
-    version: 2
-    build_and_test:
-      jobs:
-        - build
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
 
