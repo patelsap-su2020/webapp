@@ -16,7 +16,8 @@ jobs:
             pwd
             ls -al
             ./mvnw clean install
-            ./mvnw spring-boot:run	
+            ./mvnw spring-boot:run
+      
   workflows:
     version: 2
     build_and_test:
